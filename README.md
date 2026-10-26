@@ -35,7 +35,7 @@ mkdir -p .claude/skills && cp -r /caminho/para/cabra-spec-project .claude/skills
 
 **Outros agentes que leem skills em pasta (Cursor e equivalentes)** — copie a pasta para o diretório de skills do agente, mantendo `SKILL.md` e `references/` juntos.
 
-**GitHub Copilot e agentes leves** — use o arquivo único `copilot/SKILL.md`: cole o conteúdo como primeira mensagem da conversa ou configure-o como instruções personalizadas (por exemplo, `.github/copilot-instructions.md`).
+**GitHub Copilot e agentes leves** — use o arquivo único `copilot/skill.md`: cole o conteúdo como primeira mensagem da conversa ou configure-o como instruções personalizadas (por exemplo, `.github/copilot-instructions.md`).
 
 **Para conferir que funcionou**, peça algo como "quero especificar uma feature de cadastro de clientes". A skill deve classificar o porte, perguntar qual aprovação o entregável precisa destravar (para definir a etapa) e **não** devolver o documento na primeira resposta.
 
@@ -102,7 +102,7 @@ Formato de skill em camadas (progressive disclosure), pensado para agentes com b
 
 **Instalação:** veja a seção [Instalação](#instalação) acima.
 
-### 2. Versão para Copilot / agentes leves (`copilot/SKILL.md`)
+### 2. Versão para Copilot / agentes leves (`copilot/skill.md`)
 
 Arquivo único e autossuficiente, sem dependência de arquivos externos ou memória persistente de arquivos (a busca na web é opcional) — pensado para agentes com contexto mais curto ou maior tendência a alucinar (ex.: GitHub Copilot Chat na versão gratuita), onde múltiplos arquivos de referência viram risco em vez de organização.
 

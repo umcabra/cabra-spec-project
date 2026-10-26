@@ -50,7 +50,7 @@ Expresse sempre como percentual (0–100%). Seções fora da etapa nunca puxam o
 
 ## Limiares e gate de liberação
 
-Os limiares por etapa estão em `etapas.md`: **E1 70%, E2 70%, E3 75%, E4 80%**. Para alterar um limiar, mude lá e nos lugares que repetem a tabela (`SKILL.md`, `README.md` e `copilot/SKILL.md`).
+Os limiares por etapa estão em `etapas.md`: **E1 70%, E2 70%, E3 75%, E4 80%**. Para alterar um limiar, mude lá e nos lugares que repetem a tabela (`SKILL.md`, `README.md` e `copilot/skill.md`).
 
 O **gate de liberação** da etapa está satisfeito quando:
 
