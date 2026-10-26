@@ -1,5 +1,5 @@
 ---
-name: "spec-descoberta-scrum"
+name: "cabra-spec-project"
 description: "Conduz a descoberta e especificação de projetos de produto/software para PMs, POs, Líderes Técnicos, Stakeholders, Engenheiros de Requisitos e Gerentes de Projeto seniores, com descoberta progressiva compatível com Scrum, entregue em etapas curtas e aprováveis (E1 Visão, E2 Regras e Requisitos, E3 Aceitação e Backlog, E4 Completo). NÃO gera o documento de imediato — pesquisa, mapeia lacunas por seção, calcula uma Pontuação de Completude por etapa, questiona só os pontos críticos da etapa e só produz o documento de 13 seções (Meta SMART, Regras de Negócio, Requisitos Funcionais, Critérios de Aceitação, Histórias de Usuário, Riscos, Matriz de Rastreabilidade etc.) quando a informação da etapa for suficiente. Use sempre que o usuário pedir para especificar, documentar, escopar ou levantar requisitos de um projeto, feature, produto ou iniciativa — mesmo sem citar \"descoberta\", \"backlog\" ou \"spec\", inclusive para \"preciso de um PRD\" ou \"uma primeira versão para aprovar\"."
 ---
 

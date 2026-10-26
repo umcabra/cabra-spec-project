@@ -12,6 +12,33 @@ O resultado é um documento único, rastreável, com IDs cruzados entre regras d
 
 Em times onde cada etapa do projeto precisa ser aprovada mediante um entregável, exigir um score alto de tudo antes de mostrar qualquer coisa é caro. Por isso o gate de completude é aplicado **por etapa**: cada versão do documento é avaliada só nas seções dela, com um limiar próprio, e o score global aparece sempre para que ninguém perca a visão do todo.
 
+## Instalação
+
+Escolha a versão conforme o agente que você usa (detalhes das duas versões mais abaixo). Em todos os casos, comece clonando o repositório:
+
+```bash
+git clone https://github.com/umcabra/cabra-spec-project.git
+cd cabra-spec-project
+```
+
+**Claude Code** — copie a pasta inteira para o diretório de skills, mantendo o nome `cabra-spec-project` (o mesmo valor do campo `name` do `SKILL.md`):
+
+```bash
+# disponível em todos os seus projetos
+mkdir -p ~/.claude/skills && cp -r . ~/.claude/skills/cabra-spec-project
+
+# ou só no projeto atual (a partir da raiz dele)
+mkdir -p .claude/skills && cp -r /caminho/para/cabra-spec-project .claude/skills/cabra-spec-project
+```
+
+**Claude (aplicativo e web)** — compacte a pasta em um `.zip` (o `SKILL.md` precisa ficar na raiz do arquivo, não dentro de uma subpasta extra) e adicione-o como skill nas configurações de skills da sua conta ou organização. O agente passa a descobri-la pela `description` do `SKILL.md`.
+
+**Outros agentes que leem skills em pasta (Cursor e equivalentes)** — copie a pasta para o diretório de skills do agente, mantendo `SKILL.md` e `references/` juntos.
+
+**GitHub Copilot e agentes leves** — use o arquivo único `copilot/spec-descoberta-scrum.md`: cole o conteúdo como primeira mensagem da conversa ou configure-o como instruções personalizadas (por exemplo, `.github/copilot-instructions.md`).
+
+**Para conferir que funcionou**, peça algo como "quero especificar uma feature de cadastro de clientes". A skill deve classificar o porte, perguntar qual aprovação o entregável precisa destravar (para definir a etapa) e **não** devolver o documento na primeira resposta.
+
 ## Etapas de entrega
 
 | Etapa | Nome | Seções avaliadas | Limiar | Versão |
@@ -73,7 +100,7 @@ Formato de skill em camadas (progressive disclosure), pensado para agentes com b
     └── bloco-de-estado.md        # estado portátil para ambientes sem arquivos persistentes
 ```
 
-**Instalação:** copie a pasta inteira (ou o arquivo `.skill` empacotado, se você gerou um) para o diretório de skills do seu agente. Em Claude, isso normalmente significa adicionar a skill ao seu perfil/organização e deixar o agente descobri-la pela `description` do `SKILL.md`.
+**Instalação:** veja a seção [Instalação](#instalação) acima.
 
 ### 2. Versão para Copilot / agentes leves (`copilot/spec-descoberta-scrum.md`)
 
@@ -85,7 +112,7 @@ Principais diferenças em relação à skill completa:
 - Nenhuma ferramenta externa (busca na web, conectores) é usada — toda informação vem do que o usuário escreve na conversa.
 - As regras de negócio da skill viraram condições SE/ENTÃO explícitas e um checklist anti-alucinação obrigatório antes de qualquer entrega de documento.
 
-**Instalação:** cole o conteúdo de `copilot/spec-descoberta-scrum.md` como a primeira mensagem da conversa, ou configure-o como instrução de sistema/custom instructions do seu agente.
+**Instalação:** veja a seção [Instalação](#instalação) acima (cole o conteúdo do arquivo como primeira mensagem ou como instruções personalizadas do agente).
 
 ## Uso típico
 
