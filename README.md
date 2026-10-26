@@ -104,12 +104,12 @@ Formato de skill em camadas (progressive disclosure), pensado para agentes com b
 
 ### 2. Versão para Copilot / agentes leves (`copilot/spec-descoberta-scrum.md`)
 
-Arquivo único e autossuficiente, sem dependência de arquivos externos, ferramentas de busca ou memória persistente de arquivos — pensado para agentes com contexto mais curto ou maior tendência a alucinar (ex.: GitHub Copilot Chat na versão gratuita), onde múltiplos arquivos de referência viram risco em vez de organização.
+Arquivo único e autossuficiente, sem dependência de arquivos externos ou memória persistente de arquivos (a busca na web é opcional) — pensado para agentes com contexto mais curto ou maior tendência a alucinar (ex.: GitHub Copilot Chat na versão gratuita), onde múltiplos arquivos de referência viram risco em vez de organização.
 
 Principais diferenças em relação à skill completa:
 - Todo o conteúdo (etapas, checklist, EARS, fórmula de score, regras de questionamento) está inline em um único arquivo.
 - O estado do processo (etapa-alvo, fase atual, scores, lacunas, premissas, últimos IDs) é impresso como um **Bloco de Estado** em texto ao final de cada resposta, em vez de salvo em arquivo — o usuário pode colar esse bloco de volta em uma nova conversa para retomar de onde parou.
-- Nenhuma ferramenta externa (busca na web, conectores) é usada — toda informação vem do que o usuário escreve na conversa.
+- A busca na web é opcional e funciona só como **insumo**: se o agente tiver a ferramenta, ele pesquisa contexto externo (legislação, práticas do setor, documentação pública) e apresenta o resultado como sugestão, com fonte e URL. Ele nunca decide: uma sugestão só vira fato do projeto quando o usuário a confirma, e as referências externas confirmadas aparecem listadas na Pontuação de Prontidão. Conectores continuam fora do fluxo; a informação do projeto vem do que o usuário escreve na conversa.
 - As regras de negócio da skill viraram condições SE/ENTÃO explícitas e um checklist anti-alucinação obrigatório antes de qualquer entrega de documento.
 
 **Instalação:** veja a seção [Instalação](#instalação) acima (cole o conteúdo do arquivo como primeira mensagem ou como instruções personalizadas do agente).
